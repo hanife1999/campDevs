@@ -1,0 +1,25 @@
+package kodlama.io.kodlama.io.Devs.business.concretes;
+
+import java.util.List;
+
+import kodlama.io.kodlama.io.Devs.business.abstracts.ProgrammingLanguageService;
+import kodlama.io.kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
+
+public class ProgrammingLanguageManager implements ProgrammingLanguageService {
+	private ProgrammingLanguageService programmingLanguageService;
+	
+
+	public ProgrammingLanguageManager(ProgrammingLanguageService programmingLanguageService) {
+		super();
+		this.programmingLanguageService = programmingLanguageService;
+	}
+
+
+	@Override
+	public List<ProgrammingLanguage> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

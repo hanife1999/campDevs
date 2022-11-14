@@ -1,0 +1,8 @@
+package kodlama.io.kodlama.io.Devs.dataAccess.abstracts;
+
+public interface ProgrammingLanguagesRepository {
+	void add (ProgrammingLanguage programingLanguage );
+	void delete();
+	void update ();
+
+}

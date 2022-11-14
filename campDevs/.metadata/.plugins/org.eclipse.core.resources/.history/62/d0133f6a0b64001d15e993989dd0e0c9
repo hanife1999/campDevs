@@ -1,0 +1,27 @@
+package kodlama.io.kodlama.io.Devs.business.concretes;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kodlama.io.kodlama.io.Devs.business.abstracts.ProgrammingLanguageService;
+import kodlama.io.kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
+
+@Service
+public class ProgrammingLanguageManager implements ProgrammingLanguageService {
+	private ProgrammingLanguageService programmingLanguageService;
+
+	@Autowired
+	public ProgrammingLanguageManager(ProgrammingLanguageService programmingLanguageService) {
+		super();
+		this.programmingLanguageService = programmingLanguageService;
+	}
+
+	@Override
+	public List<ProgrammingLanguage> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

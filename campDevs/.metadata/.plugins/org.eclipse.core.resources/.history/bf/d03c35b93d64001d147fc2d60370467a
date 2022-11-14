@@ -1,0 +1,18 @@
+package kodlama.io.kodlama.io.Devs.dataAccess.abstracts;
+
+import java.util.List;
+
+import kodlama.io.kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
+
+public interface ProgrammingLanguageRepository {
+	void add(ProgrammingLanguage programingLanguage);
+
+	void delete(ProgrammingLanguage programmingLanguages);
+
+	void update(ProgrammingLanguage programmingLanguages);
+
+	List<ProgrammingLanguage> getAll();
+
+	ProgrammingLanguage callById(int id);
+
+}

@@ -1,0 +1,63 @@
+package kodlama.io.kodlama.io.Devs.business.concretes;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kodlama.io.kodlama.io.Devs.business.abstracts.ProgrammingLanguageService;
+import kodlama.io.kodlama.io.Devs.dataAccess.abstracts.ProgrammingLanguageRepository;
+import kodlama.io.kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
+
+@Service
+public class ProgrammingLanguageManager implements ProgrammingLanguageService {
+	private ProgrammingLanguageRepository programmingLanguageRepository;
+
+	@Autowired
+	public ProgrammingLanguageManager(ProgrammingLanguageRepository programmingLanguageRepository) {
+		super();
+		this.programmingLanguageRepository = programmingLanguageRepository;
+	}
+
+	@Override
+	public List<ProgrammingLanguage> getAll() {
+		// TODO Auto-generated method stub
+		return programmingLanguageRepository.getAll();
+	}
+
+	@Override
+	public ProgrammingLanguage callByIs(int id) {
+
+		return programmingLanguageRepository.callById(id);
+	}
+
+	@Override
+	public boolean control(ProgrammingLanguage programmingLanguage) {
+		var listItem = getAll();
+		if (programmingLanguage.getName() == null || programmingLanguage.getName() == "") {
+			return false;
+		}
+		return null;
+	}
+
+	@Override
+	public List<ProgrammingLanguage> addProgrammingLanguage(ProgrammingLanguage programmingLanguage) {
+		if (control(programmingLanguage)) {
+			programmingLanguageRepository.addProgrammingLanguage(programmingLanguage);
+		}
+		return null;
+	}
+
+	@Override
+	public List<ProgrammingLanguage> deleteProgrammingLanguage(ProgrammingLanguage programmingLanguage) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProgrammingLanguage> updateProgrammingLanguage(ProgrammingLanguage programmingLanguage) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

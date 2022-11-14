@@ -1,0 +1,23 @@
+package kodlama.io.kodlama.io.Devs.webApi.controllers;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import kodlama.io.kodlama.io.Devs.business.abstracts.ProgrammingLanguageService;
+import kodlama.io.kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
+@RestController
+public class ProgrammingLanguagesController {
+	public ProgrammingLanguageService programmingLanguageService;
+
+	public ProgrammingLanguagesController(ProgrammingLanguageService programmingLanguageService) {
+		super();
+		this.programmingLanguageService = programmingLanguageService;
+	}
+
+	public List<ProgrammingLanguage> getAll() {
+		return programmingLanguageService.getAll();
+
+	}
+
+}
